@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {}
+    "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
+    "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
+        "projectUniqueName": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
         "projectName": "HotelSysRD",
-        "projectPath": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
+        "projectPath": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
         "packagesPath": "C:\\Users\\Raymelg\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\HotelSysRD\\obj\\",
+        "outputPath": "c:\\Dev\\HotelSysRD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
