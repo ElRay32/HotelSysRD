@@ -4,38 +4,47 @@
     ViewData["Title"] = "Habitaciones";
 }
 
-<h1>Habitaciones</h1>
+<h1 class="mb-4">Habitaciones</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Nueva Habitación</a>
+    <a asp-action="Create" class="btn btn-primary">Crear nueva habitación</a>
 </p>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Número</th>
-            <th>Tipo</th>
-            <th>Precio por Noche</th>
-            <th>Estado</th>
-            <th>Capacidad</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var habitacion in Model)
-        {
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No hay habitaciones registradas todavía.
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
             <tr>
-                <td>@habitacion.Numero</td>
-                <td>@habitacion.Tipo</td>
-                <td>@habitacion.PrecioPorNoche</td>
-                <td>@habitacion.Estado</td>
-                <td>@habitacion.Capacidad</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@habitacion.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@habitacion.Id">Detalles</a> |
-                    <a asp-action="Delete" asp-route-id="@habitacion.Id">Eliminar</a>
-                </td>
+                <th>Número</th>
+                <th>Tipo</th>
+                <th>Precio por Noche</th>
+                <th>Estado</th>
+                <th>Capacidad</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var habitacion in Model)
+            {
+                <tr>
+                    <td>@habitacion.Numero</td>
+                    <td>@habitacion.Tipo</td>
+                    <td>@habitacion.PrecioPorNoche</td>
+                    <td>@habitacion.Estado</td>
+                    <td>@habitacion.Capacidad</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@habitacion.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@habitacion.Id" class="btn btn-sm btn-info">Detalles</a>
+                        <a asp-action="Delete" asp-route-id="@habitacion.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
