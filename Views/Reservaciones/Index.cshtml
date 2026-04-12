@@ -1,0 +1,50 @@
+﻿@model IEnumerable<HotelSysRD.Models.Reservacion>
+
+@{
+    ViewData["Title"] = "Reservaciones";
+}
+
+<h1 class="mb-4">Reservaciones</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nueva reservación</a>
+</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No hay reservaciones registradas todavía.
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Habitación</th>
+                <th>Fecha Entrada</th>
+                <th>Fecha Salida</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservacion in Model)
+            {
+                <tr>
+                    <td>@reservacion.Cliente?.Nombre @reservacion.Cliente?.Apellido</td>
+                    <td>@reservacion.Habitacion?.Numero - @reservacion.Habitacion?.Tipo</td>
+                    <td>@reservacion.FechaEntrada.ToShortDateString()</td>
+                    <td>@reservacion.FechaSalida.ToShortDateString()</td>
+                    <td>@reservacion.Estado</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@reservacion.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@reservacion.Id" class="btn btn-sm btn-info">Detalles</a>
+                        <a asp-action="Delete" asp-route-id="@reservacion.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
