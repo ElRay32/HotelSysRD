@@ -12,5 +12,6 @@ namespace HotelSysRD.Data
 
         // Tabla de habitaciones en la base de datos
         public DbSet<Habitacion> Habitaciones { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }

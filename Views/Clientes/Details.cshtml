@@ -1,0 +1,29 @@
+﻿@model HotelSysRD.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalle de Cliente";
+}
+
+<h1>Detalle de Cliente</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.Nombre</dd>
+
+        <dt class="col-sm-3">Apellido</dt>
+        <dd class="col-sm-9">@Model.Apellido</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+
+        <dt class="col-sm-3">Teléfono</dt>
+        <dd class="col-sm-9">@Model.Telefono</dd>
+
+        <dt class="col-sm-3">Documento</dt>
+        <dd class="col-sm-9">@Model.DocumentoIdentidad</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Volver</a>
