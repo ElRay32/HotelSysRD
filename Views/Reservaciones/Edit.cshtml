@@ -1,0 +1,49 @@
+﻿@model HotelSysRD.Models.Reservacion
+
+@{
+    ViewData["Title"] = "Editar Reservación";
+}
+
+<h1>Editar Reservación</h1>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="ClienteId"></label>
+        <select asp-for="ClienteId" asp-items="ViewBag.ClienteId" class="form-control"></select>
+        <span asp-validation-for="ClienteId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="HabitacionId"></label>
+        <select asp-for="HabitacionId" asp-items="ViewBag.HabitacionId" class="form-control"></select>
+        <span asp-validation-for="HabitacionId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FechaEntrada"></label>
+        <input asp-for="FechaEntrada" class="form-control" type="date" />
+        <span asp-validation-for="FechaEntrada" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FechaSalida"></label>
+        <input asp-for="FechaSalida" class="form-control" type="date" />
+        <span asp-validation-for="FechaSalida" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Estado"></label>
+        <select asp-for="Estado" class="form-control">
+            <option value="Activa">Activa</option>
+            <option value="Finalizada">Finalizada</option>
+            <option value="Cancelada">Cancelada</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

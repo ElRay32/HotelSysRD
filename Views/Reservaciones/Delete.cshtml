@@ -1,0 +1,35 @@
+﻿@model HotelSysRD.Models.Reservacion
+
+@{
+    ViewData["Title"] = "Eliminar Reservación";
+}
+
+<h1>Eliminar Reservación</h1>
+
+<h3>¿Estás seguro de que deseas eliminar esta reservación?</h3>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Cliente</dt>
+        <dd class="col-sm-9">@Model.Cliente?.Nombre @Model.Cliente?.Apellido</dd>
+
+        <dt class="col-sm-3">Habitación</dt>
+        <dd class="col-sm-9">@Model.Habitacion?.Numero - @Model.Habitacion?.Tipo</dd>
+
+        <dt class="col-sm-3">Fecha Entrada</dt>
+        <dd class="col-sm-9">@Model.FechaEntrada.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Fecha Salida</dt>
+        <dd class="col-sm-9">@Model.FechaSalida.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Estado</dt>
+        <dd class="col-sm-9">@Model.Estado</dd>
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

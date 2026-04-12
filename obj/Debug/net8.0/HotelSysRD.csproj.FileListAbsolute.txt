@@ -261,3 +261,4 @@ C:\Dev\HotelSysRD\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.Syste
 C:\Dev\HotelSysRD\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Dev\HotelSysRD\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Dev\HotelSysRD\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Dev\HotelSysRD\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
