@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwB4AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwB4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-12T19:28:25.124Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "Views\\Reservaciones\\Delete.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAuwCIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T19:28:08.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:28:08.814Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Views\\Reservaciones\\Details.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAuwBwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T19:27:36.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:27:36.95Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Views\\Reservaciones\\Edit.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAuwDAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T19:27:14.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:27:14.213Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Views\\Reservaciones\\Create.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAuwDMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T19:26:52.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:26:52.338Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "Views\\Reservaciones\\Index.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAgwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T19:26:27.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:26:27.898Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "Controllers\\ReservacionesController.cs",
               "ViewState": "AgIAALYAAAAAAAAAAAAuwMsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T19:25:35.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:25:35.929Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "Data\\HotelContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T19:23:41.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:23:41.126Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "Models\\Reservacion.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAuwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T19:23:07.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T19:23:07.342Z"
             }
           ]
         }
