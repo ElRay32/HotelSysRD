@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PCk9YCsBb/o=",
+  "dgSpecHash": "nPtDyNBVcZY=",
   "success": true,
-  "projectFilePath": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
+  "projectFilePath": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raymelg\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Raymelg\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

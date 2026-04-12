@@ -1,0 +1,50 @@
+﻿@model IEnumerable<HotelSysRD.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1 class="mb-4">Clientes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nuevo cliente</a>
+</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No hay clientes registrados todavía.
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Documento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Nombre</td>
+                    <td>@cliente.Apellido</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Telefono</td>
+                    <td>@cliente.DocumentoIdentidad</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@cliente.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@cliente.Id" class="btn btn-sm btn-info">Detalles</a>
+                        <a asp-action="Delete" asp-route-id="@cliente.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
