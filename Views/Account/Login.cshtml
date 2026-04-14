@@ -7,29 +7,29 @@
 
 <div class="row justify-content-center mt-5">
     <div class="col-md-5">
-        <div class="card shadow">
-            <div class="card-header text-center bg-dark text-white">
-                <h3>Iniciar Sesión</h3>
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-header text-center bg-primary text-white rounded-top-4">
+                <h3 class="mb-0">Iniciar Sesión</h3>
             </div>
-            <div class="card-body">
+            <div class="card-body p-4">
                 <form asp-action="Login" method="post">
                     @Html.AntiForgeryToken()
 
                     <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                     <div class="mb-3">
-                        <label asp-for="Usuario" class="form-label"></label>
+                        <label asp-for="Usuario" class="form-label fw-semibold"></label>
                         <input asp-for="Usuario" class="form-control" />
                         <span asp-validation-for="Usuario" class="text-danger"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label asp-for="Contrasena" class="form-label"></label>
+                        <label asp-for="Contrasena" class="form-label fw-semibold"></label>
                         <input asp-for="Contrasena" class="form-control" />
                         <span asp-validation-for="Contrasena" class="text-danger"></span>
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    <button type="submit" class="btn btn-primary w-100">Entrar al sistema</button>
                 </form>
             </div>
         </div>
