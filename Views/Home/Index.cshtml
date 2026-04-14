@@ -2,7 +2,41 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center mt-5">
-    <h1 class="display-4">Bienvenido a HotelSys RD</h1>
-    <p class="lead">Sistema de gestión hotelera para administrar habitaciones, clientes y reservaciones.</p>
+<div class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-primary">Bienvenido a HotelSys RD</h1>
+    <p class="lead text-secondary">
+        Sistema de gestión hotelera para administrar habitaciones, clientes y reservaciones.
+    </p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow border-0 rounded-4">
+            <div class="card-body text-center">
+                <h3 class="card-title text-primary">Habitaciones</h3>
+                <p class="card-text">Gestiona las habitaciones del hotel, su tipo, capacidad, precio y estado.</p>
+                <a asp-controller="Habitaciones" asp-action="Index" class="btn btn-primary">Ir a Habitaciones</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow border-0 rounded-4">
+            <div class="card-body text-center">
+                <h3 class="card-title text-success">Clientes</h3>
+                <p class="card-text">Registra y administra la información de los clientes del hotel.</p>
+                <a asp-controller="Clientes" asp-action="Index" class="btn btn-success">Ir a Clientes</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow border-0 rounded-4">
+            <div class="card-body text-center">
+                <h3 class="card-title text-danger">Reservaciones</h3>
+                <p class="card-text">Controla las reservaciones y su relación con clientes y habitaciones.</p>
+                <a asp-controller="Reservaciones" asp-action="Index" class="btn btn-danger">Ir a Reservaciones</a>
+            </div>
+        </div>
+    </div>
 </div>
