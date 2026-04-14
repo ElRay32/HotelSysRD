@@ -1,5 +1,6 @@
 ﻿using HotelSysRD.Data;
 using HotelSysRD.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,12 +20,22 @@ namespace HotelSysRD.Controllers
         // Muestra el listado completo de habitaciones
         public async Task<IActionResult> Index()
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             return View(await _context.Habitaciones.ToListAsync());
         }
 
         // Muestra el detalle de una habitación específica
         public async Task<IActionResult> Details(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -44,6 +55,11 @@ namespace HotelSysRD.Controllers
         // Muestra el formulario para crear una nueva habitación
         public IActionResult Create()
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             return View();
         }
 
@@ -52,6 +68,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Habitacion habitacion)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(habitacion);
@@ -65,6 +86,11 @@ namespace HotelSysRD.Controllers
         // Muestra el formulario para editar una habitación existente
         public async Task<IActionResult> Edit(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -84,6 +110,12 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Habitacion habitacion)
         {
+
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id != habitacion.Id)
             {
                 return NotFound();
@@ -117,6 +149,11 @@ namespace HotelSysRD.Controllers
         // Muestra la vista de confirmación para eliminar una habitación
         public async Task<IActionResult> Delete(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -138,6 +175,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var habitacion = await _context.Habitaciones.FindAsync(id);
 
             if (habitacion != null)
@@ -154,5 +196,10 @@ namespace HotelSysRD.Controllers
         {
             return _context.Habitaciones.Any(h => h.Id == id);
         }
+        private bool UsuarioNoAutenticado()
+        {
+            return string.IsNullOrEmpty(HttpContext.Session.GetString("UsuarioLogueado"));
+        }
+
     }
 }

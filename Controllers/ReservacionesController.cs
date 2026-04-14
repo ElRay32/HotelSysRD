@@ -1,5 +1,6 @@
 ﻿using HotelSysRD.Data;
 using HotelSysRD.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,11 @@ namespace HotelSysRD.Controllers
         // Muestra el listado de reservaciones con cliente y habitación
         public async Task<IActionResult> Index()
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var reservaciones = _context.Reservaciones
                 .Include(r => r.Cliente)
                 .Include(r => r.Habitacion);
@@ -29,6 +35,11 @@ namespace HotelSysRD.Controllers
         // Muestra detalles de una reservación
         public async Task<IActionResult> Details(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -50,6 +61,11 @@ namespace HotelSysRD.Controllers
         // Muestra formulario de creación
         public IActionResult Create()
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             CargarListas();
             return View();
         }
@@ -59,6 +75,12 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Reservacion reservacion)
         {
+
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (reservacion.FechaSalida <= reservacion.FechaEntrada)
             {
                 ModelState.AddModelError("FechaSalida", "La fecha de salida debe ser mayor que la fecha de entrada.");
@@ -78,6 +100,11 @@ namespace HotelSysRD.Controllers
         // Muestra formulario de edición
         public async Task<IActionResult> Edit(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -98,6 +125,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Reservacion reservacion)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id != reservacion.Id)
             {
                 return NotFound();
@@ -135,6 +167,11 @@ namespace HotelSysRD.Controllers
         // Muestra confirmación de eliminación
         public async Task<IActionResult> Delete(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -158,6 +195,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var reservacion = await _context.Reservaciones.FindAsync(id);
 
             if (reservacion != null)
@@ -199,6 +241,10 @@ namespace HotelSysRD.Controllers
         private bool ReservacionExists(int id)
         {
             return _context.Reservaciones.Any(r => r.Id == id);
+        }
+        private bool UsuarioNoAutenticado()
+        {
+            return string.IsNullOrEmpty(HttpContext.Session.GetString("UsuarioLogueado"));
         }
     }
 }

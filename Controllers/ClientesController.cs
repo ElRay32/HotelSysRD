@@ -1,5 +1,6 @@
 ﻿using HotelSysRD.Data;
 using HotelSysRD.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,12 +20,22 @@ namespace HotelSysRD.Controllers
         // Muestra el listado de clientes
         public async Task<IActionResult> Index()
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             return View(await _context.Clientes.ToListAsync());
         }
 
         // Muestra el detalle de un cliente
         public async Task<IActionResult> Details(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -43,6 +54,11 @@ namespace HotelSysRD.Controllers
         // Muestra el formulario de creación
         public IActionResult Create()
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             return View();
         }
 
@@ -51,6 +67,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Cliente cliente)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(cliente);
@@ -64,6 +85,11 @@ namespace HotelSysRD.Controllers
         // Muestra el formulario de edición
         public async Task<IActionResult> Edit(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -84,6 +110,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Cliente cliente)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id != cliente.Id)
             {
                 return NotFound();
@@ -115,6 +146,11 @@ namespace HotelSysRD.Controllers
         // Muestra la confirmación de eliminación
         public async Task<IActionResult> Delete(int? id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -135,6 +171,11 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (UsuarioNoAutenticado())
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var cliente = await _context.Clientes.FindAsync(id);
 
             if (cliente != null)
@@ -151,5 +192,11 @@ namespace HotelSysRD.Controllers
         {
             return _context.Clientes.Any(c => c.Id == id);
         }
+
+        private bool UsuarioNoAutenticado()
+        {
+            return string.IsNullOrEmpty(HttpContext.Session.GetString("UsuarioLogueado"));
+        }
+
     }
 }
