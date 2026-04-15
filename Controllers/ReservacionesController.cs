@@ -1,5 +1,6 @@
 ﻿using HotelSysRD.Data;
 using HotelSysRD.Models;
+using HotelSysRD.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,9 +13,12 @@ namespace HotelSysRD.Controllers
     {
         private readonly HotelContext _context;
 
-        public ReservacionesController(HotelContext context)
+        private readonly EmailService _emailService;
+
+        public ReservacionesController(HotelContext context, EmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         // Muestra el listado de reservaciones con cliente y habitación
@@ -106,7 +110,6 @@ namespace HotelSysRD.Controllers
 
                 if (habitacion != null)
                 {
-                    // Cálculo de noches
                     int noches = (int)Math.Ceiling((reservacion.FechaSalida - reservacion.FechaEntrada).TotalDays);
                     if (noches <= 0)
                     {
@@ -122,6 +125,36 @@ namespace HotelSysRD.Controllers
 
                 _context.Add(reservacion);
                 await _context.SaveChangesAsync();
+
+                var cliente = await _context.Clientes.FindAsync(reservacion.ClienteId);
+
+                if (cliente != null && habitacion != null && !string.IsNullOrWhiteSpace(cliente.Email))
+                {
+                    try
+                    {
+                        string html = EmailTemplates.ConfirmacionReserva(
+                            cliente.Nombre + " " + cliente.Apellido,
+                            habitacion.Numero,
+                            habitacion.Tipo,
+                            reservacion.FechaEntrada,
+                            reservacion.FechaSalida,
+                            reservacion.CantidadNoches,
+                            reservacion.PrecioPorNoche,
+                            reservacion.TotalAPagar
+                        );
+
+                        await _emailService.EnviarCorreoAsync(
+                            cliente.Email,
+                            "Confirmación de tu reservación en HotelSys RD",
+                            html
+                        );
+                    }
+                    catch
+                    {
+                        // No bloquea la creación de la reservación si falla el correo
+                    }
+                }
+
                 return RedirectToAction(nameof(Index));
             }
 
