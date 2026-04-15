@@ -17,10 +17,10 @@
         <dd class="col-sm-9">@Model.Habitacion?.Numero - @Model.Habitacion?.Tipo</dd>
 
         <dt class="col-sm-3">Fecha Entrada</dt>
-        <dd class="col-sm-9">@Model.FechaEntrada.ToShortDateString()</dd>
+        <dd>@Model.FechaEntrada.ToString("dd/MM/yyyy HH:mm")</dd>
 
         <dt class="col-sm-3">Fecha Salida</dt>
-        <dd class="col-sm-9">@Model.FechaSalida.ToShortDateString()</dd>
+        <dd>@Model.FechaSalida.ToString("dd/MM/yyyy HH:mm")</dd>
 
         <dt class="col-sm-3">Estado</dt>
         <dd class="col-sm-9">@Model.Estado</dd>

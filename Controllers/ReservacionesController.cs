@@ -25,6 +25,8 @@ namespace HotelSysRD.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
+            await ActualizarReservacionesFinalizadasAsync();
+
             var reservaciones = _context.Reservaciones
                 .Include(r => r.Cliente)
                 .Include(r => r.Habitacion);
@@ -75,7 +77,6 @@ namespace HotelSysRD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Reservacion reservacion)
         {
-
             if (UsuarioNoAutenticado())
             {
                 return RedirectToAction("Login", "Account");
@@ -83,12 +84,32 @@ namespace HotelSysRD.Controllers
 
             if (reservacion.FechaSalida <= reservacion.FechaEntrada)
             {
-                ModelState.AddModelError("FechaSalida", "La fecha de salida debe ser mayor que la fecha de entrada.");
+                ModelState.AddModelError("FechaSalida", "La fecha y hora de salida debe ser mayor que la fecha y hora de entrada.");
+            }
+
+            bool existeSolapamiento = await _context.Reservaciones.AnyAsync(r =>
+                r.HabitacionId == reservacion.HabitacionId &&
+                r.Estado == "Activa" &&
+                reservacion.FechaEntrada < r.FechaSalida &&
+                reservacion.FechaSalida > r.FechaEntrada);
+
+            if (existeSolapamiento)
+            {
+                ModelState.AddModelError("HabitacionId", "La habitación ya está reservada en ese rango de fecha y hora.");
             }
 
             if (ModelState.IsValid)
             {
+                reservacion.Estado = "Activa";
+
                 _context.Add(reservacion);
+
+                var habitacion = await _context.Habitaciones.FindAsync(reservacion.HabitacionId);
+                if (habitacion != null)
+                {
+                    habitacion.Estado = "Ocupada";
+                }
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -137,7 +158,19 @@ namespace HotelSysRD.Controllers
 
             if (reservacion.FechaSalida <= reservacion.FechaEntrada)
             {
-                ModelState.AddModelError("FechaSalida", "La fecha de salida debe ser mayor que la fecha de entrada.");
+                ModelState.AddModelError("FechaSalida", "La fecha y hora de salida debe ser mayor que la fecha y hora de entrada.");
+            }
+
+            bool existeSolapamiento = await _context.Reservaciones.AnyAsync(r =>
+                r.Id != reservacion.Id &&
+                r.HabitacionId == reservacion.HabitacionId &&
+                r.Estado == "Activa" &&
+                reservacion.FechaEntrada < r.FechaSalida &&
+                reservacion.FechaSalida > r.FechaEntrada);
+
+            if (existeSolapamiento)
+            {
+                ModelState.AddModelError("HabitacionId", "La habitación ya está reservada en ese rango de fecha y hora.");
             }
 
             if (ModelState.IsValid)
@@ -245,6 +278,31 @@ namespace HotelSysRD.Controllers
         private bool UsuarioNoAutenticado()
         {
             return string.IsNullOrEmpty(HttpContext.Session.GetString("UsuarioLogueado"));
+        }
+
+        private async Task ActualizarReservacionesFinalizadasAsync()
+        {
+            var ahora = DateTime.Now;
+
+            var reservacionesFinalizadas = await _context.Reservaciones
+                .Include(r => r.Habitacion)
+                .Where(r => r.Estado == "Activa" && r.FechaSalida <= ahora)
+                .ToListAsync();
+
+            foreach (var reservacion in reservacionesFinalizadas)
+            {
+                reservacion.Estado = "Finalizada";
+
+                if (reservacion.Habitacion != null)
+                {
+                    reservacion.Habitacion.Estado = "Disponible";
+                }
+            }
+
+            if (reservacionesFinalizadas.Any())
+            {
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
