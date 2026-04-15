@@ -60,7 +60,13 @@ namespace HotelSysRD.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            return View();
+            var habitacion = new Habitacion
+            {
+                Numero = GenerarSiguienteNumeroHabitacion(),
+                Estado = "Disponible"
+            };
+
+            return View(habitacion);
         }
 
         // Procesa los datos enviados desde el formulario de creación
@@ -72,6 +78,9 @@ namespace HotelSysRD.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
+
+            // Genera el número automáticamente en el servidor
+            habitacion.Numero = GenerarSiguienteNumeroHabitacion();
 
             if (ModelState.IsValid)
             {
@@ -200,6 +209,23 @@ namespace HotelSysRD.Controllers
         {
             return string.IsNullOrEmpty(HttpContext.Session.GetString("UsuarioLogueado"));
         }
+        private string GenerarSiguienteNumeroHabitacion()
+        {
+            var ultimaHabitacion = _context.Habitaciones
+                .OrderByDescending(h => h.Id)
+                .FirstOrDefault();
 
+            if (ultimaHabitacion == null || string.IsNullOrWhiteSpace(ultimaHabitacion.Numero))
+            {
+                return "101";
+            }
+
+            if (int.TryParse(ultimaHabitacion.Numero, out int numeroActual))
+            {
+                return (numeroActual + 1).ToString();
+            }
+
+            return "101";
+        }
     }
 }
