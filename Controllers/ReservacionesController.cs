@@ -102,14 +102,25 @@ namespace HotelSysRD.Controllers
             {
                 reservacion.Estado = "Activa";
 
-                _context.Add(reservacion);
-
                 var habitacion = await _context.Habitaciones.FindAsync(reservacion.HabitacionId);
+
                 if (habitacion != null)
                 {
+                    // Cálculo de noches
+                    int noches = (int)Math.Ceiling((reservacion.FechaSalida - reservacion.FechaEntrada).TotalDays);
+                    if (noches <= 0)
+                    {
+                        noches = 1;
+                    }
+
+                    reservacion.PrecioPorNoche = habitacion.PrecioPorNoche;
+                    reservacion.CantidadNoches = noches;
+                    reservacion.TotalAPagar = habitacion.PrecioPorNoche * noches;
+
                     habitacion.Estado = "Ocupada";
                 }
 
+                _context.Add(reservacion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -132,6 +143,7 @@ namespace HotelSysRD.Controllers
             }
 
             var reservacion = await _context.Reservaciones.FindAsync(id);
+
             if (reservacion == null)
             {
                 return NotFound();

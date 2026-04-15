@@ -30,5 +30,16 @@ namespace HotelSysRD.Models
 
         [ForeignKey("HabitacionId")]
         public Habitacion? Habitacion { get; set; }
+
+        [Display(Name = "Precio por Noche")]
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal PrecioPorNoche { get; set; }
+
+        [Display(Name = "Cantidad de Noches")]
+        public int CantidadNoches { get; set; }
+
+        [Display(Name = "Total a Pagar")]
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal TotalAPagar { get; set; }
     }
 }

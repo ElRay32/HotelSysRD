@@ -26,6 +26,9 @@ else
                 <th>Fecha Entrada</th>
                 <th>Fecha Salida</th>
                 <th>Estado</th>
+                <th>Precio/Noche</th>
+                <th>Noches</th>
+                <th>Total</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -37,6 +40,9 @@ else
                     <td>@reservacion.Habitacion?.Numero - @reservacion.Habitacion?.Tipo</td>
                     <td>@reservacion.FechaEntrada.ToString("dd/MM/yyyy HH:mm")</td>
                     <td>@reservacion.FechaSalida.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@reservacion.PrecioPorNoche.ToString("C")</td>
+                    <td>@reservacion.CantidadNoches</td>
+                    <td>@reservacion.TotalAPagar.ToString("C")</td>
                     <td>@reservacion.Estado</td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@reservacion.Id" class="btn btn-sm btn-warning">Editar</a>
