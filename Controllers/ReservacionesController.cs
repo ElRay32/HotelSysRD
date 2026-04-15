@@ -102,14 +102,25 @@ namespace HotelSysRD.Controllers
             {
                 reservacion.Estado = "Activa";
 
-                _context.Add(reservacion);
-
                 var habitacion = await _context.Habitaciones.FindAsync(reservacion.HabitacionId);
+
                 if (habitacion != null)
                 {
+                    // Cálculo de noches
+                    int noches = (int)Math.Ceiling((reservacion.FechaSalida - reservacion.FechaEntrada).TotalDays);
+                    if (noches <= 0)
+                    {
+                        noches = 1;
+                    }
+
+                    reservacion.PrecioPorNoche = habitacion.PrecioPorNoche;
+                    reservacion.CantidadNoches = noches;
+                    reservacion.TotalAPagar = habitacion.PrecioPorNoche * noches;
+
                     habitacion.Estado = "Ocupada";
                 }
 
+                _context.Add(reservacion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -132,6 +143,7 @@ namespace HotelSysRD.Controllers
             }
 
             var reservacion = await _context.Reservaciones.FindAsync(id);
+
             if (reservacion == null)
             {
                 return NotFound();
@@ -247,27 +259,23 @@ namespace HotelSysRD.Controllers
         // Carga listas de clientes y habitaciones para los dropdowns
         private void CargarListas(int? clienteId = null, int? habitacionId = null)
         {
-            ViewBag.ClienteId = new SelectList(
-                _context.Clientes.Select(c => new
-                {
-                    c.Id,
-                    NombreCompleto = c.Nombre + " " + c.Apellido
-                }).ToList(),
-                "Id",
-                "NombreCompleto",
-                clienteId
-            );
-
-            ViewBag.HabitacionId = new SelectList(
-                _context.Habitaciones.Select(h => new
+            ViewBag.HabitacionId = new SelectList(_context.Habitaciones.Select(h => new
                 {
                     h.Id,
-                    Descripcion = h.Numero + " - " + h.Tipo
-                }).ToList(),
-                "Id",
-                "Descripcion",
-                habitacionId
-            );
+                    Descripcion = h.Numero + " - " + h.Tipo + " - $" + h.PrecioPorNoche,
+                    PrecioPorNoche = h.PrecioPorNoche
+        }).ToList(),
+        "Id",
+        "Descripcion",
+        habitacionId
+    );
+
+            ViewBag.ClienteId = new SelectList(
+    _context.Clientes,
+    "Id",
+    "Nombre",
+    clienteId
+);
         }
 
         // Verifica si la reservación existe
