@@ -1,10 +1,18 @@
 using HotelSysRD.Data;
+using HotelSysRD.Models;
+using HotelSysRD.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<EmailSettings>(
+    builder.Configuration.GetSection("EmailSettings"));
+
+builder.Services.AddScoped<EmailService>();
+
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
