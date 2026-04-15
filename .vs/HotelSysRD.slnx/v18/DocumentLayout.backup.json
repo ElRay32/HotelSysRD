@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Controllers\\ReservacionesController.cs",
               "ToolTip": "C:\\Dev\\HotelSysRD\\Controllers\\ReservacionesController.cs",
               "RelativeToolTip": "Controllers\\ReservacionesController.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAxwKIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wG8BAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T19:03:01.094Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:02:08.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T19:02:08.781Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "Services\\EmailService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAuwCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:01:09.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T19:01:09.175Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Services\\EmailTemplates.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAmwGYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:00:40.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T19:00:40.835Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Models\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:00:07.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T19:00:07.247Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-15T18:52:48.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T18:52:48.199Z"
             }
           ]
         }

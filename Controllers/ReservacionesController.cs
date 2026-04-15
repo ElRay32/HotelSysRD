@@ -327,6 +327,7 @@ namespace HotelSysRD.Controllers
 
             var reservacionesFinalizadas = await _context.Reservaciones
                 .Include(r => r.Habitacion)
+                .Include(r => r.Cliente)
                 .Where(r => r.Estado == "Activa" && r.FechaSalida <= ahora)
                 .ToListAsync();
 
@@ -337,6 +338,26 @@ namespace HotelSysRD.Controllers
                 if (reservacion.Habitacion != null)
                 {
                     reservacion.Habitacion.Estado = "Disponible";
+                }
+
+                if (reservacion.Cliente != null && !string.IsNullOrWhiteSpace(reservacion.Cliente.Email))
+                {
+                    try
+                    {
+                        string html = EmailTemplates.DespedidaCliente(
+                            reservacion.Cliente.Nombre + " " + reservacion.Cliente.Apellido
+                        );
+
+                        await _emailService.EnviarCorreoAsync(
+                            reservacion.Cliente.Email,
+                            "Gracias por hospedarte en HotelSys RD",
+                            html
+                        );
+                    }
+                    catch
+                    {
+                        // No bloquea la actualización si el correo falla
+                    }
                 }
             }
 
