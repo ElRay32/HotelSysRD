@@ -259,27 +259,23 @@ namespace HotelSysRD.Controllers
         // Carga listas de clientes y habitaciones para los dropdowns
         private void CargarListas(int? clienteId = null, int? habitacionId = null)
         {
-            ViewBag.ClienteId = new SelectList(
-                _context.Clientes.Select(c => new
-                {
-                    c.Id,
-                    NombreCompleto = c.Nombre + " " + c.Apellido
-                }).ToList(),
-                "Id",
-                "NombreCompleto",
-                clienteId
-            );
-
-            ViewBag.HabitacionId = new SelectList(
-                _context.Habitaciones.Select(h => new
+            ViewBag.HabitacionId = new SelectList(_context.Habitaciones.Select(h => new
                 {
                     h.Id,
-                    Descripcion = h.Numero + " - " + h.Tipo
-                }).ToList(),
-                "Id",
-                "Descripcion",
-                habitacionId
-            );
+                    Descripcion = h.Numero + " - " + h.Tipo + " - $" + h.PrecioPorNoche,
+                    PrecioPorNoche = h.PrecioPorNoche
+        }).ToList(),
+        "Id",
+        "Descripcion",
+        habitacionId
+    );
+
+            ViewBag.ClienteId = new SelectList(
+    _context.Clientes,
+    "Id",
+    "Nombre",
+    clienteId
+);
         }
 
         // Verifica si la reservación existe

@@ -1,7 +1,11 @@
 ﻿@model HotelSysRD.Models.Reservacion
+@using HotelSysRD.Data
+@inject HotelContext _context
 
 @{
     ViewData["Title"] = "Editar Reservación";
+
+    var habitaciones = _context.Habitaciones.ToList();
 }
 
 <h1>Editar Reservación</h1>
@@ -18,19 +22,36 @@
 
     <div class="mb-3">
         <label asp-for="HabitacionId"></label>
-        <select asp-for="HabitacionId" asp-items="ViewBag.HabitacionId" class="form-control"></select>
+        <select asp-for="HabitacionId" class="form-control" id="HabitacionId">
+            <option value="">-- Seleccione una habitación --</option>
+            @foreach (var habitacion in habitaciones)
+            {
+                if (habitacion.Id == Model.HabitacionId)
+                {
+                    <option value="@habitacion.Id" data-precio="@habitacion.PrecioPorNoche" selected>
+                        @habitacion.Numero - @habitacion.Tipo - $@habitacion.PrecioPorNoche
+                    </option>
+                }
+                else
+                {
+                    <option value="@habitacion.Id" data-precio="@habitacion.PrecioPorNoche">
+                        @habitacion.Numero - @habitacion.Tipo - $@habitacion.PrecioPorNoche
+                    </option>
+                }
+            }
+        </select>
         <span asp-validation-for="HabitacionId" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="FechaEntrada"></label>
-        <input asp-for="FechaEntrada" class="form-control" type="datetime-local" />
+        <input asp-for="FechaEntrada" class="form-control" type="datetime-local" id="FechaEntrada" />
         <span asp-validation-for="FechaEntrada" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="FechaSalida"></label>
-        <input asp-for="FechaSalida" class="form-control" type="datetime-local" />
+        <input asp-for="FechaSalida" class="form-control" type="datetime-local" id="FechaSalida" />
         <span asp-validation-for="FechaSalida" class="text-danger"></span>
     </div>
 
@@ -44,6 +65,58 @@
         <span asp-validation-for="Estado" class="text-danger"></span>
     </div>
 
+    <div class="card shadow-sm border-0 rounded-4 mb-4">
+        <div class="card-body">
+            <h4 class="text-primary">Resumen de pago estimado</h4>
+            <p class="mb-1"><strong>Precio por noche:</strong> <span id="precioPorNoche">$0.00</span></p>
+            <p class="mb-1"><strong>Cantidad de noches:</strong> <span id="cantidadNoches">0</span></p>
+            <p class="mb-0"><strong>Total estimado:</strong> <span id="totalAPagar">$0.00</span></p>
+        </div>
+    </div>
+
     <button type="submit" class="btn btn-primary">Actualizar</button>
     <a asp-action="Index" class="btn btn-secondary">Volver</a>
 </form>
+
+@section Scripts {
+    <script>
+        function calcularResumenReserva() {
+            const habitacionSelect = document.getElementById("HabitacionId");
+            const fechaEntradaInput = document.getElementById("FechaEntrada");
+            const fechaSalidaInput = document.getElementById("FechaSalida");
+
+            const precioPorNocheSpan = document.getElementById("precioPorNoche");
+            const cantidadNochesSpan = document.getElementById("cantidadNoches");
+            const totalAPagarSpan = document.getElementById("totalAPagar");
+
+            const selectedOption = habitacionSelect.options[habitacionSelect.selectedIndex];
+            const precio = parseFloat(selectedOption.getAttribute("data-precio")) || 0;
+
+            const fechaEntrada = new Date(fechaEntradaInput.value);
+            const fechaSalida = new Date(fechaSalidaInput.value);
+
+            let noches = 0;
+
+            if (!isNaN(fechaEntrada.getTime()) && !isNaN(fechaSalida.getTime())) {
+                const diferenciaMs = fechaSalida - fechaEntrada;
+                const diferenciaDias = diferenciaMs / (1000 * 60 * 60 * 24);
+
+                if (diferenciaDias > 0) {
+                    noches = Math.ceil(diferenciaDias);
+                }
+            }
+
+            const total = precio * noches;
+
+            precioPorNocheSpan.textContent = `$${precio.toFixed(2)}`;
+            cantidadNochesSpan.textContent = noches;
+            totalAPagarSpan.textContent = `$${total.toFixed(2)}`;
+        }
+
+        document.getElementById("HabitacionId").addEventListener("change", calcularResumenReserva);
+        document.getElementById("FechaEntrada").addEventListener("change", calcularResumenReserva);
+        document.getElementById("FechaSalida").addEventListener("change", calcularResumenReserva);
+
+        calcularResumenReserva();
+    </script>
+}
