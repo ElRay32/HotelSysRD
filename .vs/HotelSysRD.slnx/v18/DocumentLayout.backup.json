@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Dev\\HotelSysRD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\views\\reservaciones\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:views\\reservaciones\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\views\\reservaciones\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:views\\reservaciones\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\views\\reservaciones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:views\\reservaciones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\views\\reservaciones\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:views\\reservaciones\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\views\\reservaciones\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:views\\reservaciones\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\controllers\\reservacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:controllers\\reservacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\models\\reservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:models\\reservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservaciones\\Delete.cshtml",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Reservaciones\\Delete.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAewBYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-15T12:52:06.255Z",
+              "WhenOpened": "2026-04-15T13:26:46.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T12:49:55.579Z",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservaciones\\Details.cshtml",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Details.cshtml",
+              "RelativeToolTip": "Views\\Reservaciones\\Details.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T13:26:04.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservaciones\\Index.cshtml",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reservaciones\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T13:25:36.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservaciones\\Edit.cshtml",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Reservaciones\\Edit.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T13:25:21.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservaciones\\Create.cshtml",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Views\\Reservaciones\\Create.cshtml",
+              "RelativeToolTip": "Views\\Reservaciones\\Create.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T13:24:50.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReservacionesController.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Controllers\\ReservacionesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReservacionesController.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Controllers\\ReservacionesController.cs",
+              "RelativeToolTip": "Controllers\\ReservacionesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T12:49:29.966Z"
+              "WhenOpened": "2026-04-15T13:15:53.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Reservacion.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Models\\Reservacion.cs",
+              "RelativeDocumentMoniker": "Models\\Reservacion.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\Models\\Reservacion.cs",
+              "RelativeToolTip": "Models\\Reservacion.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA5wBgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T13:13:15.614Z",
+              "EditorCaption": ""
             }
           ]
         }
