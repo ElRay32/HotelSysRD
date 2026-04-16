@@ -17,6 +17,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    
+    <Compile Remove="HotelSysRD.AutomationTests\**\*.cs" />
+  <EmbeddedResource Remove="HotelSysRD.AutomationTests\**\*" />
   </ItemGroup>
 
 </Project>

@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Dev\\HotelSysRD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\controllers\\reservacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:controllers\\reservacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\tests\\logintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\tests\\logintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\pages\\habitacionespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\pages\\habitacionespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\services\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:services\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\pages\\clientespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\pages\\clientespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\tests\\habitacionestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\tests\\habitacionestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|c:\\dev\\hotelsysrd\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5096D642-3402-EF48-AA80-264DC2391084}|HotelSysRD.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\tests\\clientestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\tests\\clientestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\utils\\testbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\utils\\testbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\drivers\\webdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\drivers\\webdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|c:\\dev\\hotelsysrd\\hotelsysrd.automationtests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F191A060-716C-41C6-9D84-D72B5192602C}|HotelSysRD.AutomationTests\\HotelSysRD.AutomationTests.csproj|solutionrelative:hotelsysrd.automationtests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,80 +46,122 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReservacionesController.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Controllers\\ReservacionesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReservacionesController.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Controllers\\ReservacionesController.cs",
-              "RelativeToolTip": "Controllers\\ReservacionesController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA1wG8BAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ClientesTests.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Tests\\ClientesTests.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Tests\\ClientesTests.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Tests\\ClientesTests.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Tests\\ClientesTests.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:03:01.094Z",
+              "WhenOpened": "2026-04-16T01:13:14.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientesPage.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Pages\\ClientesPage.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Pages\\ClientesPage.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Pages\\ClientesPage.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Pages\\ClientesPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T00:36:34.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HabitacionesTests.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Tests\\HabitacionesTests.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Tests\\HabitacionesTests.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Tests\\HabitacionesTests.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Tests\\HabitacionesTests.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T00:36:10.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HabitacionesPage.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Pages\\HabitacionesPage.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Pages\\HabitacionesPage.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Pages\\HabitacionesPage.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Pages\\HabitacionesPage.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T00:35:47.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "LoginTests.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Tests\\LoginTests.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Tests\\LoginTests.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Tests\\LoginTests.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Tests\\LoginTests.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:02:08.781Z"
+              "WhenOpened": "2026-04-16T00:35:26.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Services\\EmailService.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Services\\EmailService.cs",
-              "RelativeToolTip": "Services\\EmailService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAuwCcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Pages\\LoginPage.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Pages\\LoginPage.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Pages\\LoginPage.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Pages\\LoginPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:01:09.175Z"
+              "WhenOpened": "2026-04-16T00:35:02.092Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmailTemplates.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Services\\EmailTemplates.cs",
-              "RelativeDocumentMoniker": "Services\\EmailTemplates.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Services\\EmailTemplates.cs",
-              "RelativeToolTip": "Services\\EmailTemplates.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwGYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "TestBase.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Utils\\TestBase.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Utils\\TestBase.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Utils\\TestBase.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Utils\\TestBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:00:40.835Z"
+              "WhenOpened": "2026-04-16T00:34:08.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailSettings.cs",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\Models\\EmailSettings.cs",
-              "RelativeDocumentMoniker": "Models\\EmailSettings.cs",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\Models\\EmailSettings.cs",
-              "RelativeToolTip": "Models\\EmailSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "WebDriverFactory.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Drivers\\WebDriverFactory.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\Drivers\\WebDriverFactory.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\Drivers\\WebDriverFactory.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\Drivers\\WebDriverFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T19:00:07.247Z"
+              "WhenOpened": "2026-04-16T00:32:07.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Dev\\HotelSysRD\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-15T18:52:48.199Z"
+              "DocumentIndex": 8,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "HotelSysRD.AutomationTests\\UnitTest1.cs",
+              "ToolTip": "C:\\Dev\\HotelSysRD\\HotelSysRD.AutomationTests\\UnitTest1.cs",
+              "RelativeToolTip": "HotelSysRD.AutomationTests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T00:26:38.93Z"
             }
           ]
         }
