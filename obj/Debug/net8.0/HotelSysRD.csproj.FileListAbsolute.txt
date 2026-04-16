@@ -266,3 +266,14 @@ c:\Dev\HotelSysRD\obj\Debug\net8.0\ref\HotelSysRD.dll
 C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\obj\Debug\net8.0\HotelSysRD.AutomationTests.sourcelink.json
 C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests.deps.json
 C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests.runtimeconfig.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\appsettings.Development.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\appsettings.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests.deps.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests.runtimeconfig.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests\obj\Debug\net8.0\HotelSysRD.AutomationTests.sourcelink.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests\obj\HotelSysRD.AutomationTests.csproj.nuget.dgspec.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.AutomationTests\obj\project.assets.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.deps.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.runtimeconfig.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.staticwebassets.endpoints.json
+C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.staticwebassets.runtime.json

@@ -79,8 +79,13 @@ namespace HotelSysRD.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            // Genera el número automáticamente en el servidor
+            // Genera valores controlados por el servidor
             habitacion.Numero = GenerarSiguienteNumeroHabitacion();
+            habitacion.Estado = "Disponible";
+
+            // Limpia valores de ModelState para los campos que controla el backend
+            ModelState.Remove(nameof(Habitacion.Numero));
+            ModelState.Remove(nameof(Habitacion.Estado));
 
             if (ModelState.IsValid)
             {
