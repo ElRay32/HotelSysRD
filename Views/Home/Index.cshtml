@@ -1,0 +1,108 @@
+﻿@model HotelSysRD.ViewModels.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold text-primary">Dashboard HotelSys RD</h1>
+    <p class="lead text-secondary">
+        Resumen general del sistema de gestión hotelera.
+    </p>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+        <div class="card shadow border-0 rounded-4 text-center h-100">
+            <div class="card-body">
+                <h5 class="card-title text-primary">Habitaciones</h5>
+                <h2 class="fw-bold">@Model.TotalHabitaciones</h2>
+                <p class="text-muted">Total registradas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow border-0 rounded-4 text-center h-100">
+            <div class="card-body">
+                <h5 class="card-title text-success">Clientes</h5>
+                <h2 class="fw-bold">@Model.TotalClientes</h2>
+                <p class="text-muted">Total registrados</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow border-0 rounded-4 text-center h-100">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Reservaciones</h5>
+                <h2 class="fw-bold">@Model.TotalReservaciones</h2>
+                <p class="text-muted">Total registradas</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 text-center h-100">
+            <div class="card-body">
+                <h5 class="text-success">Disponibles</h5>
+                <h3 class="fw-bold">@Model.HabitacionesDisponibles</h3>
+                <p class="text-muted">Habitaciones listas para reservar</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 text-center h-100">
+            <div class="card-body">
+                <h5 class="text-warning">Ocupadas</h5>
+                <h3 class="fw-bold">@Model.HabitacionesOcupadas</h3>
+                <p class="text-muted">Habitaciones actualmente ocupadas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 text-center h-100">
+            <div class="card-body">
+                <h5 class="text-secondary">Mantenimiento</h5>
+                <h3 class="fw-bold">@Model.HabitacionesMantenimiento</h3>
+                <p class="text-muted">Habitaciones fuera de servicio</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow border-0 rounded-4">
+            <div class="card-body text-center">
+                <h4 class="text-primary">Gestionar Habitaciones</h4>
+                <p>Consulta, crea y administra las habitaciones del hotel.</p>
+                <a asp-controller="Habitaciones" asp-action="Index" class="btn btn-primary">Ir a Habitaciones</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow border-0 rounded-4">
+            <div class="card-body text-center">
+                <h4 class="text-success">Gestionar Clientes</h4>
+                <p>Consulta, crea y administra los clientes registrados.</p>
+                <a asp-controller="Clientes" asp-action="Index" class="btn btn-success">Ir a Clientes</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow border-0 rounded-4">
+            <div class="card-body text-center">
+                <h4 class="text-danger">Gestionar Reservaciones</h4>
+                <p>Consulta, crea y administra las reservaciones del sistema.</p>
+                <a asp-controller="Reservaciones" asp-action="Index" class="btn btn-danger">Ir a Reservaciones</a>
+            </div>
+        </div>
+    </div>
+</div>

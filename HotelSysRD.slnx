@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="HotelSysRD.AutomationTests/HotelSysRD.AutomationTests.csproj" Id="f191a060-716c-41c6-9d84-d72b5192602c" />
   <Project Path="HotelSysRD.csproj" />
 </Solution>

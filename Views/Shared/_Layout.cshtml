@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HotelSysRD</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+            body {
+                background: linear-gradient(to right, #f8f9fa, #eef3f8);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .navbar-custom {
+                background: linear-gradient(90deg, #0d3b66, #1d5c96);
+            }
+
+            .navbar-brand,
+            .nav-link,
+            .navbar-text {
+                color: white !important;
+                font-weight: 500;
+            }
+
+            .nav-link:hover {
+                color: #dbeafe !important;
+            }
+
+            .main-container {
+                min-height: 80vh;
+            }
+
+            .footer-custom {
+                background-color: #0d3b66;
+                color: white;
+                text-align: center;
+                padding: 12px;
+                margin-top: 30px;
+            }
+
+            .page-card {
+                border: none;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+                background-color: white;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">HotelSysRD</a>
+
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Habitaciones" asp-action="Index">Habitaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Reservaciones" asp-action="Index">Reservaciones</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" asp-controller="Account" asp-action="Logout">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container main-container mt-4">
+        <div class="page-card p-4">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer-custom">
+        <small>HotelSysRD - Proyecto Final Programación III</small>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

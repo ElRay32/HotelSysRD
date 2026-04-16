@@ -1,0 +1,49 @@
+﻿@model HotelSysRD.Models.Habitacion
+
+@{
+    ViewData["Title"] = "Editar Habitación";
+}
+
+<h1>Editar Habitación</h1>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Numero" class="form-label"></label>
+        <input asp-for="Numero" class="form-control" />
+        <span asp-validation-for="Numero" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Tipo" class="form-label"></label>
+        <input asp-for="Tipo" class="form-control" />
+        <span asp-validation-for="Tipo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PrecioPorNoche" class="form-label"></label>
+        <input asp-for="PrecioPorNoche" class="form-control" />
+        <span asp-validation-for="PrecioPorNoche" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Estado" class="form-label"></label>
+        <select asp-for="Estado" class="form-control">
+            <option value="Disponible">Disponible</option>
+            <option value="Ocupada">Ocupada</option>
+            <option value="Mantenimiento">Mantenimiento</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Capacidad" class="form-label"></label>
+        <input asp-for="Capacidad" class="form-control" />
+        <span asp-validation-for="Capacidad" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

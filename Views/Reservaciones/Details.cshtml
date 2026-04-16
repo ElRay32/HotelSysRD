@@ -1,0 +1,38 @@
+﻿@model HotelSysRD.Models.Reservacion
+
+@{
+    ViewData["Title"] = "Detalle de Reservación";
+}
+
+<h1>Detalle de Reservación</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Cliente</dt>
+        <dd class="col-sm-9">@Model.Cliente?.Nombre @Model.Cliente?.Apellido</dd>
+
+        <dt class="col-sm-3">Habitación</dt>
+        <dd class="col-sm-9">@Model.Habitacion?.Numero - @Model.Habitacion?.Tipo</dd>
+
+        <dt class="col-sm-3">Fecha Entrada</dt>
+        <dd>@Model.FechaEntrada.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        <dt class="col-sm-3">Fecha Salida</dt>
+        <dd>@Model.FechaSalida.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        <dt class="col-sm-3">Estado</dt>
+        <dd class="col-sm-9">@Model.Estado</dd>
+
+        <dt class="col-sm-3">Precio por Noche</dt>
+        <dd class="col-sm-9">@Model.PrecioPorNoche.ToString("C")</dd>
+
+        <dt class="col-sm-3">Cantidad de Noches</dt>
+        <dd class="col-sm-9">@Model.CantidadNoches</dd>
+
+        <dt class="col-sm-3">Total a Pagar</dt>
+        <dd class="col-sm-9">@Model.TotalAPagar.ToString("C")</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

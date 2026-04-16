@@ -1,0 +1,50 @@
+﻿@model IEnumerable<HotelSysRD.Models.Habitacion>
+
+@{
+    ViewData["Title"] = "Habitaciones";
+}
+
+<h1 class="mb-4 text-primary fw-bold">Habitaciones</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nueva habitación</a>
+</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No hay habitaciones registradas todavía.
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-hover table-striped align-middle">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Tipo</th>
+                <th>Precio por Noche</th>
+                <th>Estado</th>
+                <th>Capacidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var habitacion in Model)
+            {
+                <tr>
+                    <td>@habitacion.Numero</td>
+                    <td>@habitacion.Tipo</td>
+                    <td>@habitacion.PrecioPorNoche</td>
+                    <td>@habitacion.Estado</td>
+                    <td>@habitacion.Capacidad</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@habitacion.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@habitacion.Id" class="btn btn-sm btn-info">Detalles</a>
+                        <a asp-action="Delete" asp-route-id="@habitacion.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
