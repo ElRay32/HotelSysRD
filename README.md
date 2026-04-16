@@ -195,8 +195,3 @@ Se creó un proyecto de automatización en C# utilizando **Selenium WebDriver** 
 - `Tests`
 - `Utils`
 
-### Ejecución
-Las pruebas se ejecutan mediante:
-
-```bash
-dotnet test HotelSysRD.AutomationTests --no-build
