@@ -277,3 +277,4 @@ C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\H
 C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.runtimeconfig.json
 C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.staticwebassets.endpoints.json
 C:\Dev\HotelSysRD\bin\Debug\net8.0\HotelSysRD.AutomationTests\bin\Debug\net8.0\HotelSysRD.staticwebassets.runtime.json
+C:\Dev\HotelSysRD\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

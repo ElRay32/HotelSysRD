@@ -84,14 +84,15 @@
                         <p>Estimado/a <strong>{nombreCliente}</strong>,</p>
 
                         <p>
-                            Gracias por hospedarte con nosotros. Esperamos que tu experiencia en HotelSys RD haya sido excelente.
+                            Ha sido un privilegio haberle recibido en HotelSys RD. Le extendemos nuestro más sincero agradecimiento por su distinguida visita y la confianza que nos ha otorgado.
                         </p>
 
                         <p>
-                            Será un placer recibirte nuevamente en una próxima ocasión.
+                            Confiamos en que su experiencia haya sido plenamente satisfactoria y quedamos a la espera del honor de recibirle nuevamente.
                         </p>
 
                         <p>
+                            Le deseamos un grato y seguro regreso.<br />
                             Con aprecio,<br />
                             <strong>HotelSys RD</strong>
                         </p>

@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
-                "projectPath": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj"
+              "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
+                "projectPath": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj"
               }
             }
           }
@@ -110,6 +110,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -119,14 +133,14 @@
         }
       }
     },
-    "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
+    "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
+        "projectUniqueName": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
         "projectName": "HotelSysRD",
-        "projectPath": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
+        "projectPath": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj",
         "packagesPath": "C:\\Users\\Raymelg\\.nuget\\packages\\",
-        "outputPath": "c:\\Dev\\HotelSysRD\\obj\\",
+        "outputPath": "C:\\Dev\\HotelSysRD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -197,6 +211,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

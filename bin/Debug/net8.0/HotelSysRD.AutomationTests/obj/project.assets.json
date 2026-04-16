@@ -9077,8 +9077,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
-              "projectPath": "c:\\Dev\\HotelSysRD\\HotelSysRD.csproj"
+            "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj": {
+              "projectPath": "C:\\Dev\\HotelSysRD\\HotelSysRD.csproj"
             }
           }
         }
@@ -9155,6 +9155,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.25, 8.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.25, 8.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.25, 8.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
